@@ -1,0 +1,25 @@
+$light: #e5e5e5;
+$dark: #181A19;
+$primary: #334B71;
+$secondary: #FFE3DD;
+$orange:#E7B3A6;
+$success: #B7DAC6;
+
+$enable-negative-margins: true;
+
+$spacer:1rem;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+  6: ($spacer * 4),     
+  7: ($spacer * 5),     
+  8: ($spacer * 6.25),   
+  9: ($spacer * 7.5),    
+  10: ($spacer * 9.375)  
+);
+
+@import "~bootstrap/scss/bootstrap.scss"

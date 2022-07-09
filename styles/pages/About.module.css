@@ -1,0 +1,241 @@
+.mainContainer ital {
+    font-size: inherit;
+    font-style: italic;
+    font-family: "Gentium Basic", serif;
+}
+
+.topBanner {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.bgImageContainer {
+    pointer-events: none;
+    z-index: -1;
+}
+.bgImage {
+    opacity: 0.1;
+    object-fit: cover;
+}
+.topLeft,
+.topRight {
+    flex: 1;
+}
+.topLeft {
+    background-color: #eaeaea;
+}
+.topRight::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/paint.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+}
+.topRight {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.topInfo,
+.visionInfo {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.topInfo h1,
+.visionInfo h1 {
+    font-family: "Gentium Basic", serif;
+    font-weight: 400;
+    font-size: 3rem;
+}
+.topInfo h5,
+.visionInfo h5 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+}
+.topRight img {
+    transform: rotate(180deg);
+}
+.visionDiv {
+    background-color: var(--blue);
+    display: flex;
+}
+.visionLeft {
+    flex: 1;
+    margin: 7.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.visionInfo {
+    color: white;
+}
+.visionInfo h5 {
+    font-weight: 300;
+    font-size: 1rem;
+}
+.visionRight {
+    flex: 1;
+    background-color: #eaeaea;
+}
+
+.teamDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 7.5rem 7.5vw;
+    gap: 32px;
+}
+.teamDiv h1 {
+    font-family: "Gentium Basic", serif;
+    font-weight: 400;
+    font-size: 3rem;
+}
+.teamMembers {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 32px;
+}
+.teamMember {
+    height: 500px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.memberImageContainer {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 24px;
+}
+.memberImageContainer img {
+    object-fit: cover;
+    border-radius: 10px;
+}
+.teamMember h3 {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.teamMember h5 {
+    font-weight: 400;
+    font-size: 1rem;
+    opacity: 0.6;
+}
+.banner::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/pinkpattern.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+.banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 7.5vw;
+}
+.banner::after {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: var(--skin);
+}
+.bannerText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 60%;
+}
+.banner h1 {
+    font-family: "Gentium Basic", serif;
+    font-weight: 400;
+    font-size: 3rem;
+    text-align: center;
+}
+.banner h3 {
+    font-weight: 400;
+    width: 80%;
+    text-align: center;
+}
+.volunteer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7.5rem 7.5vw;
+}
+.volunteer h1 {
+    font-family: "Gentium Basic", serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+.volunteerSwiper {
+    width: 80vw;
+    height: 360px;
+}
+.volunteerSlide {
+    background-color: var(--blue);
+    margin: 0 10%;
+    width: 80% !important;
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    color: white;
+    /* overflow: ; */
+}
+.volunteerSlide h3 {
+    font-weight: 400;
+    font-style: italic;
+    font-family: "Gentium Basic", serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.volunteerSlide h5 {
+    font-weight: 400;
+    text-align: center;
+    font-size: 1rem;
+    opacity: 0.75;
+    line-height: 1.6rem;
+}
+.volunteerInfo {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    background-color: rebeccapurple;
+    height: 20px;
+    z-index: 5;
+}
+.volunteerImageContainer {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 24px;
+}

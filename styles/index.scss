@@ -1,0 +1,188 @@
+@import "./custom";
+// @import "~aos/dist/aos.css";
+
+* {
+    font-family: "Inter", sans-serif;
+}
+#__next {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.gentium {
+    font-family: "Gentium Basic", serif;
+}
+i {
+    font-family: inherit;
+}
+.green {
+    color: $success;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+.swiper-pagination-bullet {
+    align-self: center;
+    margin: 0 5px;
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    &-active {
+        background-color: white;
+    }
+}
+
+.bg-image {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.1;
+    }
+}
+.paint-bg {
+    @extend .bg-image;
+    &::before {
+        background-image: url(/paint.png);
+    }
+}
+.pink-bg {
+    @extend .bg-image;
+    &::before {
+        background-image: url(/pinkpattern.png);
+    }
+}
+
+.contact-bg {
+    @extend .bg-image;
+    &::before {
+        background-image: url(/contact-bg.png);
+    }
+}
+
+.fit-cover {
+    object-fit: cover;
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.paintingGallery {
+    & > div {
+        cursor: pointer;
+        position: relative;
+    }
+    & > div::after {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 32px;
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 1.3rem;
+    }
+    & > div:hover::after {
+        content: attr(data-title);
+        opacity: 1;
+    }
+}
+.section {
+    // @extend .fade-up;
+    @extend .py-7;
+}
+.section-heading {
+    @extend .gentium, .mb-4, .display-6;
+}
+.text-custom {
+    @extend .text-center, .text-xl-start;
+}
+
+.content-pad-l {
+    @extend .ps-xl-6, .ps-4;
+}
+.content-pad-r {
+    @extend .pe-xl-6, .pe-4;
+}
+.content-pad {
+    @extend .content-pad-l, .content-pad-r;
+}
+// .content-margin-nl {
+//   // @extend .ml-xl-n5;
+// }
+
+.homeTopSwiperImage {
+    height: 60vh !important;
+    min-height: 840px;
+}
+
+.custom-nav a {
+    text-decoration: none;
+    color: $primary;
+    transition: opacity 0.3s;
+}
+.custom-nav a:hover {
+    opacity: 0.7;
+}
+
+.custom-form input:not([type="submit"]),
+.custom-form textarea {
+    background-color: #eaeaea;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 1.5rem;
+}
+.custom-form input[type="submit"] {
+    background-color: $primary;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 0.6rem 2.5rem;
+    width: max-content;
+}
+
+.wp-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min(280px, 20vw));
+    grid-column-gap: 0.6rem;
+    grid-row-gap: 0.6rem;
+    div:nth-child(1) {
+        grid-area: 1 / 1 / 3 / 3;
+    }
+    div:nth-child(2) {
+        grid-area: 1 / 3 / 4 / 4;
+    }
+    div:nth-child(3) {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    div:nth-child(4) {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
