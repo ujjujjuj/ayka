@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import Link from "next/link";
 
 const CustomFooter = () => {
     return (
@@ -7,9 +8,9 @@ const CustomFooter = () => {
             className="bg-black section content-pad text-decoration-none justify-self-end"
             style={{ color: "rgba(255,255,255,0.7)" }}
         >
-            <Row className="gap-5 flex-column flex-md-row">
+            <Row className="gap-5 flex-column flex-md-row justify-content-start">
                 <Col xs="auto">
-                    <div className="d-flex gap-xl-5 mb-4 flex-column flex-xl-row">
+                    <div className="d-flex gap-xl-5 mb-4 flex-column flex-xl-row  align-items-start">
                         <p>
                             <i className="fa-regular fa-copyright"></i>&nbsp;&nbsp;2022 Ayka
                         </p>
@@ -22,45 +23,33 @@ const CustomFooter = () => {
                         </p>
                     </div>
                     <div className="d-flex gap-4">
-                        <a href="https://instagram.com/" style={{ color: "inherit" }}>
+                        <Link href="https://instagram.com/" style={{ color: "inherit" }} passHref>
                             <i className="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="https://facebook.com/" style={{ color: "inherit" }}>
+                        </Link>
+                        <Link href="https://facebook.com/" style={{ color: "inherit" }} passHref>
                             <i className="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="https://twitter.com/" style={{ color: "inherit" }}>
+                        </Link>
+                        <Link href="https://twitter.com/" style={{ color: "inherit" }} passHref>
                             <i className="fa-brands fa-twitter"></i>
-                        </a>
+                        </Link>
                     </div>
                 </Col>
-                <Col className="d-flex flex-wrap gap-5 justify-content-end">
-                    <a href="home" style={{ color: "inherit" }}>
+                <Col className="d-flex flex-wrap gap-md-5 justify-content-md-end justify-content-start gap-4">
+                    <Link href="/" style={{ color: "inherit" }}>
                         Home
-                    </a>
-                    <a href="home" style={{ color: "inherit" }}>
-                        Home
-                    </a>
-                    <a href="home" style={{ color: "inherit" }}>
-                        Home
-                    </a>
-                    <a href="home" style={{ color: "inherit" }}>
-                        Home
-                    </a>
-                    <a href="home" style={{ color: "inherit" }}>
-                        Home
-                    </a>
-                    <a href="home" style={{ color: "inherit" }}>
-                        Home
-                    </a>
-                    <a href="home" style={{ color: "inherit" }}>
-                        Home
-                    </a>
-                    <a href="home" style={{ color: "inherit" }}>
-                        Home
-                    </a>
-                    <a href="home" style={{ color: "inherit" }}>
-                        Home
-                    </a>
+                    </Link>
+                    <Link href="/about" style={{ color: "inherit" }}>
+                        About
+                    </Link>
+                    <Link href="/workshops" style={{ color: "inherit" }}>
+                        Workshops
+                    </Link>
+                    <Link href="/wallpaintings" style={{ color: "inherit" }}>
+                        Wall Paintings
+                    </Link>
+                    <Link href="/contact" style={{ color: "inherit" }}>
+                        Contact
+                    </Link>
                 </Col>
             </Row>
         </Container>

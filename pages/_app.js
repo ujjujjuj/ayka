@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "react-image-lightbox/style.css";
 import "../styles/index.scss";
+import "aos/dist/aos.css";
 
 function MyApp({ Component, pageProps }) {
     useEffect(() => {
@@ -13,7 +14,7 @@ function MyApp({ Component, pageProps }) {
         Aos.refresh();
     }, []);
 
-    return <Component {...pageProps}/>;
+    return <Component {...pageProps} />;
 }
 
 export default MyApp;
