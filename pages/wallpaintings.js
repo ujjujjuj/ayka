@@ -23,7 +23,7 @@ const WallPaintings = () => {
                         </p>
                     </Col>
                 </Row>
-                <Row className="section">
+                <Row className="section justify-content-center">
                     <Col className="content-pad">
                         <div data-aos="fade-up">
                             <h2 className="gentium">Outside a housing area</h2>
@@ -58,7 +58,7 @@ const WallPaintings = () => {
                     </Row>
                 </Row>
                 <Row></Row>
-                <Row className="section bg-primary text-white">
+                <Row className="section bg-primary text-white justify-content-center">
                     <Col className="content-pad">
                         <div data-aos="fade-up">
                             <h2 className="gentium">Daycare</h2>
@@ -92,7 +92,7 @@ const WallPaintings = () => {
                         </Col>
                     </Row>
                 </Row>
-                <Row className="section">
+                <Row className="section justify-content-center">
                     <Col className="content-pad">
                         <div data-aos="fade-up">
                             <h2 className="gentium">Individual Requests</h2>
@@ -117,8 +117,8 @@ const WallPaintings = () => {
                             </div>
                         </div>
                     </Col>
-                    <Row className="flex-center text-center mt-5" data-aos="fade-up">
-                        <Col xl={6} className="px-4">
+                    <Row className="flex-center text-center mt-5 content-pad" data-aos="fade-up">
+                        <Col xl={6} className="p-0">
                             Painted at a daycare, a flower on request in their common room. The children watched in awe
                             and we were invited to tea by a lot of them. We did individual paintings on request in a few
                             houses in the same area!

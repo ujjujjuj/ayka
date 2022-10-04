@@ -6,6 +6,7 @@ import CustomNavbar from "../components/CustomNavbar";
 import { useEffect, useState } from "react";
 import CustomFooter from "../components/CustomFooter";
 import Router from "next/router";
+import Head from "next/head";
 
 const topCarouselData = Array(3).fill({ src: "/media/home/fryer.png", alt: "Fariya Maryam" });
 const workshopData = [
@@ -74,7 +75,6 @@ const Home = () => {
 
     const onImageContainerClick = (e) => {
         setActiveImage(parseInt(e.target.getAttribute("data-id")));
-        // console.log(e.target.getAttribute("data-id"));
     };
 
     useEffect(() => {
@@ -83,6 +83,9 @@ const Home = () => {
 
     return (
         <>
+            <Head>
+                <title>Ayka | Home</title>
+            </Head>
             <CustomNavbar />
             <Container fluid>
                 <Row className="">
@@ -157,7 +160,7 @@ const Home = () => {
                             xs={1}
                             sm={2}
                             xl={4}
-                            className="d-flex w-100 gy-5 content-pad text-center text-sm-start justify-content-around align-items-center flex-wrap"
+                            className="d-flex w-100 gy-5 content-pad text-center text-sm-start justify-content-around align-items-center"
                         >
                             {featuresData.map((dat, idx) => (
                                 <Col

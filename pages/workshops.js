@@ -72,7 +72,7 @@ const Workshops = () => {
                             sm={2}
                             xl={4}
                             className="d-flex w-100 content-pad text-center text-sm-start justify-content-around flex-wrap align-items-strech"
-                            style={{ gap: "12px" }}
+                            style={{ gap: "42px" }}
                         >
                             {featuresData.map((dat, idx) => (
                                 <Col

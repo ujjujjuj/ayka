@@ -134,8 +134,8 @@ i {
 // }
 
 .homeTopSwiperImage {
-    height: 60vh !important;
-    min-height: 840px;
+    height: 40vh !important;
+    min-height: 720px;
 }
 
 .custom-nav a {
@@ -213,11 +213,12 @@ i {
     max-height: 50vh;
 }
 .features-data-home {
-    max-width: 360px;
+    max-width: 300px;
 }
 
 @media only screen and (max-width: 1200px) {
     .homeTopSwiperImage {
+        height: 40vh;
         min-height: 0;
     }
 }
@@ -279,9 +280,15 @@ a:hover {
     transform: translateY(-50px);
 }
 @media only screen and (max-width: 720px) {
+    .swiper-button-next {
+        transform: translate(5px, -50px);
+    }
+    .swiper-button-prev {
+        transform: translate(-5px, -50px);
+    }
     .swiper-button-next::after,
     .swiper-button-prev::after {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     .review-swiper {
         padding-left: 0 !important;
@@ -380,4 +387,8 @@ a:hover {
             height: calc(60vh + 1rem);
         }
     }
+}
+
+.manage-table input {
+    background-color: transparent;
 }

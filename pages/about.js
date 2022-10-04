@@ -137,7 +137,7 @@ const About = () => {
                     >
                         <SwiperSlide className="flex-center">
                             <div
-                                className="bg-primary position-relative py-5 mx-5 px-4 px-md-7"
+                                className="bg-primary position-relative py-5 mx-4 px-4 px-md-7"
                                 style={{ maxWidth: "800px" }}
                             >
                                 <h2 className="gentium section-title fst-italic mb-4">
@@ -158,8 +158,8 @@ const About = () => {
                                         src="/media/about/member.png"
                                         alt="person"
                                         style={{
-                                            width: "100px",
-                                            height: "100px",
+                                            width: "85px",
+                                            height: "85px",
                                             objectFit: "cover",
                                             borderRadius: "999px",
                                         }}

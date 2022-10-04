@@ -1,35 +1,32 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import Link from "next/link";
 
-const CustomNavbar = () => {
+const AdminNav = () => {
     return (
         <Navbar bg="white" expand="lg" sticky="top" className="shadow-sm" style={{ zIndex: "999" }}>
             <Container className="w-100 mx-0 content-pad" fluid>
-                <Navbar.Brand href="/" className="gentium">
-                    Ayka
+                <Navbar.Brand href="/admin" className="gentium">
+                    Ayka Admin
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0 outline-0">
                     <i className="fa-solid fa-bars text-primary"></i>
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto align-items-center gap-lg-5 custom-nav gap-sm-4 my-3">
-                        <Link href="/" passHref>
-                            Home
-                        </Link>
-                        <Link href="/about" passHref>
-                            About
-                        </Link>
-                        <Link href="/blogs" passHref>
+                    <Nav className="ms-auto align-items-center gap-4 custom-nav">
+                        <Link href="/admin/" passHref>
                             Blogs
                         </Link>
-                        <Link href="/workshops" passHref>
-                            Our Work
+                        <Link href="/admin/image" passHref>
+                            Upload Image
                         </Link>
-                        <Link href="/wallpaintings" passHref>
-                            Wall Paintings
+                        {/* <Link href="/admin/manage" passHref>
+                            Manage accounts
+                        </Link> */}
+                        <Link href="/admin/password" passHref>
+                            Change password
                         </Link>
-                        <Link href="/contact" passHref>
-                            Volunteer
+                        <Link href="/admin/logout" passHref>
+                            Logout
                         </Link>
                     </Nav>
                 </Navbar.Collapse>
@@ -38,4 +35,4 @@ const CustomNavbar = () => {
     );
 };
 
-export default CustomNavbar;
+export default AdminNav;
