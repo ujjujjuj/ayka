@@ -19,8 +19,9 @@ const Contact = () => {
                 >
                     <h2 className="gentium display-6">Contact Us</h2>
                     <p>
-                        Up on his horse, up on his horse not gonna wake up here anymore listen one time, its not the
-                        truth its just a story i tell to you easy to say, easy to
+                    Ayka is a volunteer-driven organisation, and we are always on the lookout for talent, 
+                    commitment and passionate individuals. To join us or to work with us, get in touch with this form now!
+
                     </p>
                     <p>
                         <i className="fa-regular fa-envelope"></i>

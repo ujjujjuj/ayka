@@ -23,14 +23,14 @@ const CustomFooter = () => {
                         </p>
                     </div>
                     <div className="d-flex gap-4">
-                        <Link href="https://instagram.com/" style={{ color: "inherit" }} passHref>
+                        <Link href="https://www.instagram.com/ayka_forthepeople/" target = "_blank" style={{ color: "inherit" }} passHref>
                             <i className="fa-brands fa-instagram"></i>
                         </Link>
-                        <Link href="https://facebook.com/" style={{ color: "inherit" }} passHref>
+                        <Link href="https://www.facebook.com/Ayka-111482238105032" style={{ color: "inherit" }} passHref>
                             <i className="fa-brands fa-facebook-f"></i>
                         </Link>
-                        <Link href="https://twitter.com/" style={{ color: "inherit" }} passHref>
-                            <i className="fa-brands fa-twitter"></i>
+                        <Link href="https://chat.whatsapp.com/FEyOt1KQBbk8wcUTYQjN7r" style={{ color: "inherit" }} passHref>
+                            <i className="fa-brands fa-whatsapp"></i>
                         </Link>
                     </div>
                 </Col>

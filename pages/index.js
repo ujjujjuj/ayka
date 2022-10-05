@@ -99,10 +99,7 @@ const Home = () => {
                                 <i>Art</i> for the people, of the people, by the people
                             </h1>
                             <p className="">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus numquam dolore
-                                maiores sed dicta eligendi atque, incidunt excepturi, sequi quis corrupti deleniti quae
-                                minima exercitationem quisquam culpa labore et quas voluptatibus provident distinctio
-                                repudiandae qui at. Harum voluptatibus veritatis qui magni alias, quos possimus
+                            We are a youth-led nonprofit organisation committed towards the betterment of society with a strong belief in empowerment through skill-building, we strive for holistic quality education and train young students in honing their creative talents. 
                             </p>
                         </div>
                         <div className="d-flex gap-4" data-aos="fade-up">
@@ -190,7 +187,7 @@ const Home = () => {
                             <p className="">
                                 We conduct skill-building workshops with students to aid in creativity and training in
                                 addition to education across many art mediums such as cartooning, Lantern-Making, Wall
-                                Hangings, Warli Art
+                                Hangings, Warli Art.
                             </p>
                             <Button
                                 variant="primary"
@@ -301,11 +298,6 @@ const Home = () => {
                 <Row className="section flex-center row-cols-1">
                     <Col className="flex-center col-xl-6 text-center mb-6" data-aos="fade-up">
                         <h2 className="gentium display-6 mb-4">Our partners and Collaborators</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus numquam dolore maiores
-                            sed dicta eligendi atque, incidunt excepturi, sequi quis corrupti deleniti quae minima
-                            exercitationem quisquam culpa labore et quas
-                        </p>
                     </Col>
                     <Col className="flex-center flex-row gap-8 flex-wrap" data-aos="fade-up">
                         {sponsorsData.map((sponsor, idx) => (

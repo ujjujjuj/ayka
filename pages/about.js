@@ -74,13 +74,12 @@ const About = () => {
                     >
                         <h2 className="section-heading">Who we are</h2>
                         <p className="lh-lg">
-                            Up on his horse, up on his horse not gonna wake up here anymore listen one time, its not the
-                            truth its just a story i tell to you easy to say, easy to do but its not easy, well, maybe
-                            for you hope that you find it, hope that its good hope on his horse, up on his horse not
-                            gonna wake up here anymore listen one time, its not the truth its just a. Up on his horse,
-                            up on his horse not gonna wake up here anymore listenUp on his horse, up on his horse not
-                            gonna Up on his horse, up on his horse not gonna wake up here anymore listen one time, its
-                            not the truth its just
+                        We are a youth-led nonprofit organisation committed towards the betterment of society. 
+
+With a strong belief in empowerment through skill-building, we strive for holistic quality education and train young students in honing their creative talents and developing important life skills through workshops and classes. We also paint murals in rural areas in the form of interactive workshops with underprivileged children.
+
+With Delhi NCR as our Headquarters, we now have branches in Kolkata, Mumbai, Pune, Chennai and Bangalore.
+
                         </p>
                     </Col>
                 </Row>
@@ -88,11 +87,10 @@ const About = () => {
                     <Col xs={12} xl={6} className="section content-pad" data-aos="fade-up">
                         <h2 className="section-heading">Our vision</h2>
                         <p className="lh-lg">
-                            Up on his horse, up on his horse not gonna wake up here anymore listen one time, its not the
-                            truth its just a story i tell to you easy to say, easy to do but its not easy, well, maybe
-                            for you hope that you find it, hope that its good hope on his horse, up horse not gonna wake
-                            up here anymore listen one time, its not the truth its just a. Up on his horse, up on his
-                            horse not gonna wake up here anymore listen Up on his horse
+                        Ayka is on a mission to make art and culture accessible to rural areas by enriching underprivileged children
+                        with creative and cultural knowledge through our workshops, artworks, and numerous initiatives. Our entire team is 
+                        highly passionate about giving these kids a world of knowledge that would never have reached them otherwise, 
+                        hopefully adding some color and happiness to their lives. 
                         </p>
                     </Col>
                     <Col xs={12} xl={6} className="p-0">
@@ -119,7 +117,7 @@ const About = () => {
                         <h2 className="section-heading">We just don&apos;t do art, we believe in it.</h2>
                         <p>
                             Spreading joy with the help of our passion has always been the driving force for us. We want
-                            to share this experience with every child we teach, every wall we paint
+                            to share this experience with every child we teach, every wall we paint.
                         </p>
                     </Col>
                 </Row>
@@ -141,14 +139,11 @@ const About = () => {
                                 style={{ maxWidth: "800px" }}
                             >
                                 <h2 className="gentium section-title fst-italic mb-4">
-                                    “Ayka has been the best step for me so far.”
+                                    “This workshop was something I have never experienced before and it was amazing.”
                                 </h2>
                                 <p>
-                                    Up on his horse, up on his horse not gonna wake up here anymore listen one time, its
-                                    not the truth its just a story i tell to you easy to say, easy to do but its not
-                                    easy, well, maybe for you hope that you find it, hope that its good hope on his
-                                    horse, up on his horse not gonna wake up here anymore listen one time, its not the
-                                    truth its just a
+                                I have never so closely taught kids art. I noticed that even though kids had never been exposed to such activity before, they were very passionate about it. This experience has motivated me to promote more and more art to the kids or anyone for that matter who has never been exposed to art and the joy it gives.
+
                                 </p>
                                 <div
                                     className="position-absolute p-1 start-50 top-100 translate-middle"

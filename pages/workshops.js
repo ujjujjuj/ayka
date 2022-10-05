@@ -35,10 +35,8 @@ const Workshops = () => {
                         <div data-aos="fade-up">
                             <h1 className="gentium display-5">Workshops</h1>
                             <p className="lh-lg">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus numquam dolore
-                                maiores sed dicta eligendi atque, incidunt excepturi, sequi quis corrupti deleniti quae
-                                minima exercitationem quisquam culpa labore et quas voluptatibus provident distinctio
-                                repudiandae qui at. Harum voluptatibus veritatis qui magni alias, quos possimus
+                            We aid in skill-building and quality education by conducting workshops on topics like art, general knowledge, communication skills, ethics, critical thinking, social awareness and using technology for education. 
+
                             </p>
                         </div>
                         <div className="d-flex gap-4" data-aos="fade-up">
@@ -107,17 +105,9 @@ const Workshops = () => {
                                 <div className="workshop-text h-100 d-flex flex-column justify-content-center py-7">
                                     <div data-aos="fade-up">
                                         <h2 className="gentium display-6">Cartooning</h2>
-                                        <h6 className="mb-5">With Nanhe Khwab NGO, Gurgaon</h6>
+                                        <h6 className="mb-5">With Aaghaaz-E-Taaleem, Shram Vihar, Delhi</h6>
                                         <p>
-                                            Up on his horse, up on his horse not gonna wake up here anymore listen one
-                                            time, its not the truth its just a story i tell to you easy to say, easy to
-                                            do but its not easy, well, maybe for you hope that Up on his horse, up on
-                                            his horse not gonna wake up here anymore listen one time, its not the truth
-                                            its just a story i tell to you easy to say, easy to do but its not easy,
-                                            well, maybe for you hope that Up on his horse, up on his horse not gonna
-                                            wake up here anymore listen one time, its not the truth its just a story i
-                                            tell to you easy to say, easy to do but its not easy, well, maybe for you
-                                            hope that
+                                        In our most recent workshop in Delhi, we worked on basic skill-building, drawing faces on everyday objects like ice creams, books, mugs etc. We learnt drawing using references, outlining with hand-eye coordination, building confidence in basic art skills, all the while encouraging the golden rule of sharing, with crayons and markers!
                                         </p>
                                     </div>
                                 </div>
@@ -154,17 +144,11 @@ const Workshops = () => {
                                 <div className="workshop-text h-100 d-flex flex-column justify-content-center py-7">
                                     <div data-aos="fade-up">
                                         <h2 className="gentium display-6">Lantern Making</h2>
-                                        <h6 className="mb-5">With Aaghaaz-E-Taaleem, Shram Vihar, Delhi</h6>
+                                        <h6 className="mb-5">With Nanhe Khwab NGO, Gurgaon</h6>
                                         <p>
-                                            Up on his horse, up on his horse not gonna wake up here anymore listen one
-                                            time, its not the truth its just a story i tell to you easy to say, easy to
-                                            do but its not easy, well, maybe for you hope that Up on his horse, up on
-                                            his horse not gonna wake up here anymore listen one time, its not the truth
-                                            its just a story i tell to you easy to say, easy to do but its not easy,
-                                            well, maybe for you hope that Up on his horse, up on his horse not gonna
-                                            wake up here anymore listen one time, its not the truth its just a story i
-                                            tell to you easy to say, easy to do but its not easy, well, maybe for you
-                                            hope that
+                                        For Diwali, we created lanterns using chart paper and origami sheet, a few ribbons here and there and done! The children designed flowers and made bands from the leftover paper. We worked on accuracy and clean-cut work and creativity and colour sense, apart from the usual skill-building and art-craft basics!
+
+
                                         </p>
                                     </div>
                                 </div>
@@ -204,15 +188,7 @@ const Workshops = () => {
                                         <h2 className="gentium display-6">Warli Art</h2>
                                         <h6 className="mb-5">Online Workshop</h6>
                                         <p>
-                                            Up on his horse, up on his horse not gonna wake up here anymore listen one
-                                            time, its not the truth its just a story i tell to you easy to say, easy to
-                                            do but its not easy, well, maybe for you hope that Up on his horse, up on
-                                            his horse not gonna wake up here anymore listen one time, its not the truth
-                                            its just a story i tell to you easy to say, easy to do but its not easy,
-                                            well, maybe for you hope that Up on his horse, up on his horse not gonna
-                                            wake up here anymore listen one time, its not the truth its just a story i
-                                            tell to you easy to say, easy to do but its not easy, well, maybe for you
-                                            hope that
+                                            We conducted an online workshop for Warli Art, a Maharashtrian art form.
                                         </p>
                                     </div>
                                 </div>
@@ -233,15 +209,7 @@ const Workshops = () => {
                                         <h2 className="gentium display-6">Wall Hangings</h2>
                                         <h6 className="mb-5">With Aaghaaz-E-Taaleem, Shram Vihar, Delhi</h6>
                                         <p>
-                                            Up on his horse, up on his horse not gonna wake up here anymore listen one
-                                            time, its not the truth its just a story i tell to you easy to say, easy to
-                                            do but its not easy, well, maybe for you hope that Up on his horse, up on
-                                            his horse not gonna wake up here anymore listen one time, its not the truth
-                                            its just a story i tell to you easy to say, easy to do but its not easy,
-                                            well, maybe for you hope that Up on his horse, up on his horse not gonna
-                                            wake up here anymore listen one time, its not the truth its just a story i
-                                            tell to you easy to say, easy to do but its not easy, well, maybe for you
-                                            hope that
+                                        We made wall hangings for Diwali, working on creative ideas suggested by them in groups.
                                         </p>
                                     </div>
                                 </div>
