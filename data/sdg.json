@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "title": "No Poverty",
+        "content": "End poverty in all its forms everywhere"
+    },
+    {
+        "id": 4,
+        "title": "Quality Education",
+        "content": " Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all"
+    },
+    {
+        "id": 5,
+        "title": "Gender Equality",
+        "content": " Achieve gender equality and empower all women and girls"
+    },
+    {
+        "id": 10,
+        "title": "Reduced Inequalities",
+        "content": " Reduce inequality within and among countries"
+    }
+]

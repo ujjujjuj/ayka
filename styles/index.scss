@@ -233,47 +233,6 @@ a:hover {
     opacity: 0.7;
 }
 
-.sdgGallery {
-    width: 100vw;
-    flex-wrap: wrap;
-    & > div > img:first-child {
-        position: absolute;
-        width: 100px;
-        height: 120px;
-        bottom: 0;
-        right: 0;
-    }
-    & > div {
-        cursor: pointer;
-        position: relative;
-    }
-    & > div {
-        flex: 1;
-        min-width: 320px;
-        height: 40vh;
-        max-height: 40vh;
-    }
-    & > div::after {
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: 2;
-        background-color: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        transition: opacity 0.3s;
-        font-size: 1.3rem;
-    }
-
-    & > div:hover::after {
-        content: attr(data-title);
-        opacity: 1;
-    }
-}
 .swiper-button-next,
 .swiper-button-prev {
     color: $primary;

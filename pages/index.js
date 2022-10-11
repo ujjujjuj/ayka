@@ -7,6 +7,7 @@ import { useEffect, useMemo, useState, useRef } from "react";
 import CustomFooter from "../components/CustomFooter";
 import Router from "next/router";
 import Head from "next/head";
+import sdgList from "../data/sdg.json";
 
 const topCarouselData = Array(3).fill({ src: "/media/home/fryer.png", alt: "Fariya Maryam" });
 const workshopData = [
@@ -51,14 +52,6 @@ const statsData = [
     { name: "Wall Paintings", amt: 10 },
     { name: "Cities", amt: 4 },
     { name: "Members", amt: 30 },
-];
-
-const sdgGallery = [
-    { src: "/media/home/gal1.png", alt: "Some text here" },
-    { src: "/media/home/gal2.png", alt: "Some text here" },
-    { src: "/media/home/gal1.png", alt: "Some text here" },
-    { src: "/media/home/gal2.png", alt: "Some text here" },
-    { src: "/media/home/gal1.png", alt: "Some text here" },
 ];
 
 const sponsorsData = ["aaghaz-e-taleem.jpg", "nanhe-khwab.jpg", "anadi.png"];
@@ -285,17 +278,33 @@ const Home = () => {
                 <Row className="section flex-center row-cols-1 paint-bg pb-0">
                     <Col className="col-xl-6 text-center">
                         <h2 className="section-heading text-centerdiv pb-4">
-                            We believe. We care. Our vision extends to making the world a better place to live in{" "}
+                            We believe. We care. Our vision extends to making the world a better place to live in
                         </h2>
                     </Col>
-                    <Row className="p-0 sdgGallery" data-aos="fade-up">
-                        {sdgGallery.map((img, idx) => (
-                            <Col key={idx} className="p-0" style={{ height: "400px" }} data-title={img.alt}>
-                                <img src="/media/home/sdg1.png" alt={img.alt} />
-                                <img src={img.src} alt={img.alt} className="w-100 h-100 fit-cover" />
-                            </Col>
-                        ))}
-                    </Row>
+                </Row>
+                <Row className="section bg-secondary d-flex flex-wrap align-items-start justify-content-center  content-pad gap-6">
+                    {sdgList.map((sdg, idx) => (
+                        <Col
+                            key={idx}
+                            className="d-flex flex-column align-items-center bg-white p-0"
+                            style={{ minWidth: "300px", maxWidth: "300px", height: "380px" }}
+                        >
+                            <img
+                                src={`/sdgs/E-WEB-Goal-${sdg.id.toString().padStart(2, "0")}.png`}
+                                alt="SDG"
+                                className="align-self-start"
+                                style={{ width: "42%", objectFit: "cover" }}
+                            />
+                            <div className="m-5 my-4">
+                                <h5>{sdg.title}</h5>
+                                <div
+                                    className="bg-black my-3"
+                                    style={{ height: "2px", width: "33%", borderRadius: "999px", opacity: 0.4 }}
+                                ></div>
+                                <p>{sdg.content}</p>
+                            </div>
+                        </Col>
+                    ))}
                 </Row>
                 <Row className="section flex-center row-cols-1">
                     <Col className="flex-center col-xl-6 text-center mb-6" data-aos="fade-up">
@@ -325,7 +334,7 @@ const AnimatingStat = ({ stat }) => {
 
     useEffect(() => {
         if (!isVisible) {
-            setAmount(0);
+            // setAmount(0);
         } else {
             intervalRef.current = setInterval(() => setAmount((_amount) => _amount + stat.amt / STEPS), TIMEMS / STEPS);
         }
