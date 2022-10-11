@@ -19,9 +19,8 @@ const Contact = () => {
                 >
                     <h2 className="gentium display-6">Contact Us</h2>
                     <p>
-                    Ayka is a volunteer-driven organisation, and we are always on the lookout for talent, 
-                    commitment and passionate individuals. To join us or to work with us, get in touch with this form now!
-
+                        Ayka is a volunteer-driven organisation, and we are always on the lookout for talent, commitment
+                        and passionate individuals. To join us or to work with us, get in touch with this form now!
                     </p>
                     <p>
                         <i className="fa-regular fa-envelope"></i>
@@ -29,7 +28,7 @@ const Contact = () => {
                     </p>
                 </Col>
                 <Col data-aos="fade-up" xs={12} xl={6} className="bg-white text-black p-4 p-sm-5">
-                    <h2 className="gentium display-6 mb-5">Write Us</h2>
+                    <h2 className="gentium display-6 mb-5">Write To Us</h2>
                     <form className="custom-form d-flex flex-column gap-4">
                         <input type="text" placeholder="Name / Organization Name" required className="w-100" />
                         <div className="d-flex gap-4 flex-column flex-sm-row">

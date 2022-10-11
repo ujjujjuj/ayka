@@ -22,14 +22,27 @@ const CustomFooter = () => {
                             <i className="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Gurgaon, Haryana
                         </p>
                     </div>
-                    <div className="d-flex gap-4">
-                        <Link href="https://www.instagram.com/ayka_forthepeople/" target = "_blank" style={{ color: "inherit" }} passHref>
+                    <div className="d-flex gap-4 lead pointer">
+                        <Link
+                            href="https://www.instagram.com/ayka_forthepeople/"
+                            target="_blank"
+                            style={{ color: "inherit" }}
+                            passHref
+                        >
                             <i className="fa-brands fa-instagram"></i>
                         </Link>
-                        <Link href="https://www.facebook.com/Ayka-111482238105032" style={{ color: "inherit" }} passHref>
+                        <Link
+                            href="https://www.facebook.com/Ayka-111482238105032"
+                            style={{ color: "inherit" }}
+                            passHref
+                        >
                             <i className="fa-brands fa-facebook-f"></i>
                         </Link>
-                        <Link href="https://chat.whatsapp.com/FEyOt1KQBbk8wcUTYQjN7r" style={{ color: "inherit" }} passHref>
+                        <Link
+                            href="https://chat.whatsapp.com/FEyOt1KQBbk8wcUTYQjN7r"
+                            style={{ color: "inherit" }}
+                            passHref
+                        >
                             <i className="fa-brands fa-whatsapp"></i>
                         </Link>
                     </div>
@@ -46,6 +59,9 @@ const CustomFooter = () => {
                     </Link>
                     <Link href="/wallpaintings" style={{ color: "inherit" }}>
                         Wall Paintings
+                    </Link>
+                    <Link href="/blogs" style={{ color: "inherit" }}>
+                        Blogs
                     </Link>
                     <Link href="/contact" style={{ color: "inherit" }}>
                         Contact

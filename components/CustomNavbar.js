@@ -19,14 +19,14 @@ const CustomNavbar = () => {
                         <Link href="/about" passHref>
                             About
                         </Link>
-                        <Link href="/blogs" passHref>
-                            Blogs
-                        </Link>
                         <Link href="/workshops" passHref>
-                            Our Work
+                            Workshops
                         </Link>
                         <Link href="/wallpaintings" passHref>
                             Wall Paintings
+                        </Link>
+                        <Link href="/blogs" passHref>
+                            Blogs
                         </Link>
                         <Link href="/contact" passHref>
                             Volunteer

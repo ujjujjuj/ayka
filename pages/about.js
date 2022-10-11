@@ -3,54 +3,8 @@ import CustomFooter from "../components/CustomFooter";
 import CustomNavbar from "../components/CustomNavbar";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
-
-const volunteerData = [
-    {
-        name: "Fariya Maryam",
-        img: "/media/about/member.png",
-        position: "Executive Director",
-    },
-    {
-        name: "Fariya Maryam",
-        img: "/media/about/member.png",
-        position: "Executive Director",
-    },
-    {
-        name: "Fariya Maryam",
-        img: "/media/about/member.png",
-        position: "Executive Director",
-    },
-    {
-        name: "Fariya Maryam",
-        img: "/media/about/member.png",
-        position: "Executive Director",
-    },
-    {
-        name: "Fariya Maryam",
-        img: "/media/about/member.png",
-        position: "Executive Director",
-    },
-    {
-        name: "Fariya Maryam",
-        img: "/media/about/member.png",
-        position: "Executive Director",
-    },
-    {
-        name: "Fariya Maryam",
-        img: "/media/about/member.png",
-        position: "Executive Director",
-    },
-    {
-        name: "Fariya Maryam",
-        img: "/media/about/member.png",
-        position: "Executive Director",
-    },
-    {
-        name: "Fariya Maryam",
-        img: "/media/about/member.png",
-        position: "Executive Director",
-    },
-];
+import volunteerData from "../data/volunteers.json";
+import testimonials from "../data/testimonials.json";
 
 const About = () => {
     return (
@@ -74,12 +28,12 @@ const About = () => {
                     >
                         <h2 className="section-heading">Who we are</h2>
                         <p className="lh-lg">
-                        We are a youth-led nonprofit organisation committed towards the betterment of society. 
-
-With a strong belief in empowerment through skill-building, we strive for holistic quality education and train young students in honing their creative talents and developing important life skills through workshops and classes. We also paint murals in rural areas in the form of interactive workshops with underprivileged children.
-
-With Delhi NCR as our Headquarters, we now have branches in Kolkata, Mumbai, Pune, Chennai and Bangalore.
-
+                            We are a youth-led nonprofit organisation committed towards the betterment of society. With
+                            a strong belief in empowerment through skill-building, we strive for holistic quality
+                            education and train young students in honing their creative talents and developing important
+                            life skills through workshops and classes. We also paint murals in rural areas in the form
+                            of interactive workshops with underprivileged children. With Delhi NCR as our Headquarters,
+                            we now have branches in Kolkata, Mumbai, Pune, Chennai and Bangalore.
                         </p>
                     </Col>
                 </Row>
@@ -87,10 +41,11 @@ With Delhi NCR as our Headquarters, we now have branches in Kolkata, Mumbai, Pun
                     <Col xs={12} xl={6} className="section content-pad" data-aos="fade-up">
                         <h2 className="section-heading">Our vision</h2>
                         <p className="lh-lg">
-                        Ayka is on a mission to make art and culture accessible to rural areas by enriching underprivileged children
-                        with creative and cultural knowledge through our workshops, artworks, and numerous initiatives. Our entire team is 
-                        highly passionate about giving these kids a world of knowledge that would never have reached them otherwise, 
-                        hopefully adding some color and happiness to their lives. 
+                            Ayka is on a mission to make art and culture accessible to rural areas by enriching
+                            underprivileged children with creative and cultural knowledge through our workshops,
+                            artworks, and numerous initiatives. Our entire team is highly passionate about giving these
+                            kids a world of knowledge that would never have reached them otherwise, hopefully adding
+                            some color and happiness to their lives.
                         </p>
                     </Col>
                     <Col xs={12} xl={6} className="p-0">
@@ -133,36 +88,35 @@ With Delhi NCR as our Headquarters, we now have branches in Kolkata, Mumbai, Pun
                         className="text-white"
                         data-aos="fade-up"
                     >
-                        <SwiperSlide className="flex-center">
-                            <div
-                                className="bg-primary position-relative py-5 mx-4 px-4 px-md-7"
-                                style={{ maxWidth: "800px" }}
-                            >
-                                <h2 className="gentium section-title fst-italic mb-4">
-                                    “This workshop was something I have never experienced before and it was amazing.”
-                                </h2>
-                                <p>
-                                I have never so closely taught kids art. I noticed that even though kids had never been exposed to such activity before, they were very passionate about it. This experience has motivated me to promote more and more art to the kids or anyone for that matter who has never been exposed to art and the joy it gives.
-
-                                </p>
+                        {testimonials.map((testimonial, idx) => (
+                            <SwiperSlide key={idx} className="flex-center">
                                 <div
-                                    className="position-absolute p-1 start-50 top-100 translate-middle"
-                                    style={{ borderRadius: "999px", backgroundColor: "white" }}
+                                    className="bg-primary position-relative py-5 mx-4 px-4 px-md-7"
+                                    style={{ maxWidth: "800px" }}
                                 >
-                                    <img
-                                        src="/media/about/member.png"
-                                        alt="person"
-                                        style={{
-                                            width: "85px",
-                                            height: "85px",
-                                            objectFit: "cover",
-                                            borderRadius: "999px",
-                                        }}
-                                    />
+                                    <h2 className="gentium section-title fst-italic mb-4">“{testimonial.title}”</h2>
+                                    <p>{testimonial.content}</p>
+                                    <div
+                                        className="position-absolute p-1 start-50 top-100 translate-middle"
+                                        style={{ borderRadius: "999px", backgroundColor: "white" }}
+                                    >
+                                        <img
+                                            src={`/members/${testimonial.author
+                                                .toLowerCase()
+                                                .replaceAll(" ", "-")}.jpg`}
+                                            alt="person"
+                                            style={{
+                                                width: "85px",
+                                                height: "85px",
+                                                objectFit: "cover",
+                                                borderRadius: "999px",
+                                            }}
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                            <h4 className="mt-6 text-black">Fariya Maryam</h4>
-                        </SwiperSlide>
+                                <h4 className="mt-6 text-black">{testimonial.author}</h4>
+                            </SwiperSlide>
+                        ))}
                     </Swiper>
                 </Row>
             </Container>
@@ -175,7 +129,7 @@ const PersonCard = ({ person, ...props }) => {
     return (
         <div {...props}>
             <img
-                src={person.img}
+                src={`/members/${person.name.toLowerCase().replaceAll(" ", "-")}.jpg`}
                 alt={person.name}
                 style={{
                     height: "260px",

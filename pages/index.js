@@ -3,7 +3,7 @@ import { Pagination, Autoplay } from "swiper";
 import { Container, Col, Row, Button } from "react-bootstrap";
 import Lightbox from "react-image-lightbox";
 import CustomNavbar from "../components/CustomNavbar";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import CustomFooter from "../components/CustomFooter";
 import Router from "next/router";
 import Head from "next/head";
@@ -48,9 +48,9 @@ const imageData = [
 ];
 const statsData = [
     { name: "Workshops", amt: 22 },
-    { name: "Workshops", amt: 22 },
-    { name: "Workshops", amt: 22 },
-    { name: "Workshops", amt: 22 },
+    { name: "Wall Paintings", amt: 10 },
+    { name: "Cities", amt: 4 },
+    { name: "Members", amt: 30 },
 ];
 
 const sdgGallery = [
@@ -61,7 +61,7 @@ const sdgGallery = [
     { src: "/media/home/gal1.png", alt: "Some text here" },
 ];
 
-const sponsorsData = ["aaghaz-e-taleem.jpg", "nanhe-khwab.jpg"];
+const sponsorsData = ["aaghaz-e-taleem.jpg", "nanhe-khwab.jpg", "anadi.png"];
 
 const getIndex = (index, max) => {
     if (!max) max = imageData.length;
@@ -99,7 +99,12 @@ const Home = () => {
                                 <i>Art</i> for the people, of the people, by the people
                             </h1>
                             <p className="">
-                            We are a youth-led nonprofit organisation committed towards the betterment of society with a strong belief in empowerment through skill-building, we strive for holistic quality education and train young students in honing their creative talents. 
+                                We are a youth-led nonprofit organisation committed towards the betterment of society.
+                                <br />
+                                With a strong belief in empowerment through skill-building, we strive for holistic
+                                quality education and train young students in honing their creative talents and
+                                developing important life skills through workshops and classes. We also paint murals in
+                                rural areas in the form of interactive workshops with underprivileged children.
                             </p>
                         </div>
                         <div className="d-flex gap-4" data-aos="fade-up">
@@ -274,10 +279,7 @@ const Home = () => {
                 )}
                 <Row className="section bg-primary text-white row-cols-1 row-cols-sm-2 row-cols-xl-4 gy-6">
                     {statsData.map((stat, idx) => (
-                        <Col className="flex-center p-0" key={idx} data-aos="fade-up">
-                            <p className="green display-1 gentium">{stat.amt}</p>
-                            <p className="lead">{stat.name}</p>
-                        </Col>
+                        <AnimatingStat stat={stat} key={idx} />
                     ))}
                 </Row>
                 <Row className="section flex-center row-cols-1 paint-bg pb-0">
@@ -309,6 +311,56 @@ const Home = () => {
             <CustomFooter />
         </>
     );
+};
+
+const AnimatingStat = ({ stat }) => {
+    const STEPS = 100;
+    const TIMEMS = 1500 + Math.random() * 1000 - 500;
+    const [amount, setAmount] = useState(0);
+
+    const elemRef = useRef();
+    let isVisible = false;
+    isVisible = useIsVisible(elemRef);
+    const intervalRef = useRef();
+
+    useEffect(() => {
+        if (!isVisible) {
+            setAmount(0);
+        } else {
+            intervalRef.current = setInterval(() => setAmount((_amount) => _amount + stat.amt / STEPS), TIMEMS / STEPS);
+        }
+        return () => clearInterval(intervalRef.current);
+    }, [isVisible, stat]);
+
+    useEffect(() => {
+        if (Math.floor(amount) == stat.amt) clearInterval(intervalRef.current);
+    }, [amount, stat.amt]);
+
+    return (
+        <Col className="flex-center p-0" data-aos="fade-up">
+            <p className="green display-1 gentium" ref={elemRef}>
+                {parseInt(amount)}+
+            </p>
+            <p className="lead">{stat.name}</p>
+        </Col>
+    );
+};
+
+const useIsVisible = (ref) => {
+    if (typeof window === "undefined") return false;
+    const [isIntersecting, setIsIntersecting] = useState(false);
+
+    const observer = useMemo(() => new IntersectionObserver(([entry]) => setIsIntersecting(entry.isIntersecting)), []);
+
+    useEffect(() => {
+        observer.observe(ref.current);
+
+        return () => {
+            observer.disconnect();
+        };
+    }, [ref, observer]);
+
+    return isIntersecting;
 };
 
 export default Home;
