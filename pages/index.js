@@ -40,12 +40,12 @@ const featuresData = [
     },
 ];
 const imageData = [
-    { size: 6, src: "/media/home/gal1.png", alt: "Caption 1" },
-    { size: 3, src: "/media/home/gal2.png", alt: "Caption 2" },
-    { size: 3, src: "/media/home/gal3.png", alt: "Caption 3" },
-    { size: 3, src: "/media/home/gal4.png", alt: "Caption 4" },
-    { size: 3, src: "/media/home/gal5.png", alt: "Caption 5" },
-    { size: 6, src: "/media/home/gal6.png", alt: "Caption 6" },
+    { size: 6, src: "/media/home/gal1.png", alt: "Food donation drive" },
+    { size: 3, src: "/media/home/gal2.png", alt: "Food donation drive" },
+    { size: 3, src: "/media/home/gal3.png", alt: "Cartooning workshop " },
+    { size: 3, src: "/media/home/gal4.png", alt: "Wall painting outside housing area" },
+    { size: 3, src: "/media/home/gal5.png", alt: "Latern-making workshop" },
+    { size: 6, src: "/media/home/gal6.png", alt: "Diwali donation drive and workshop" },
 ];
 const statsData = [
     { name: "Workshops", amt: 22 },

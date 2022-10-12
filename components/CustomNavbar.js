@@ -12,7 +12,7 @@ const CustomNavbar = () => {
                     <i className="fa-solid fa-bars text-primary"></i>
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto align-items-center gap-lg-5 custom-nav gap-sm-4 my-3">
+                    <Nav className="ms-auto align-items-center gap-lg-5 custom-nav gap-sm-4 gap-3 my-2">
                         <Link href="/" passHref>
                             Home
                         </Link>
