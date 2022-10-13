@@ -95,9 +95,12 @@ const Contact = () => {
                                 {city || "Select City"}
                             </Dropdown.Toggle>
                             <Dropdown.Menu onClick={onCity}>
-                                <Dropdown.Item value="delhi">Delhi</Dropdown.Item>
+                                <Dropdown.Item value="delhi">Delhi NCR</Dropdown.Item>
                                 <Dropdown.Item value="kolkata">Kolkata</Dropdown.Item>
                                 <Dropdown.Item value="mumbai">Mumbai</Dropdown.Item>
+                                <Dropdown.Item value="mumbai">Pune</Dropdown.Item>
+                                <Dropdown.Item value="mumbai">Bangalore</Dropdown.Item>
+                                <Dropdown.Item value="mumbai">Chennai</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                         <div>
