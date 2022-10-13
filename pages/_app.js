@@ -15,7 +15,12 @@ function MyApp({ Component, pageProps }) {
         Aos.refresh();
     }, []);
 
-    return <Component {...pageProps} />;
+    return (
+        <>
+            <ToastContainer />
+            <Component {...pageProps} />
+        </>
+    );
 }
 
 export default MyApp;

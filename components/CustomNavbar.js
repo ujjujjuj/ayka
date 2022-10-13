@@ -28,6 +28,9 @@ const CustomNavbar = () => {
                         <Link href="/blogs" passHref>
                             Blogs
                         </Link>
+                        <Link href="/donate" passHref>
+                            Donate
+                        </Link>
                         <Link href="/contact" passHref>
                             Volunteer
                         </Link>

@@ -9,7 +9,14 @@ import Router from "next/router";
 import Head from "next/head";
 import sdgList from "../data/sdg.json";
 
-const topCarouselData = Array(3).fill({ src: "/media/home/fryer.png", alt: "Fariya Maryam" });
+const topCarouselData = [
+    { src: "/media/home/fryer.png", alt: "Fariya Maryam" },
+    { src: "/media/home/landing1.jpg", home: "Landing image" },
+    { src: "/media/home/landing2.jpg", home: "Landing image" },
+    { src: "/media/home/landing3.jpg", home: "Landing image" },
+    { src: "/media/home/landing4.jpg", home: "Landing image" },
+    { src: "/media/home/landing5.jpg", home: "Landing image" },
+];
 const workshopData = [
     { src: "/media/home/work1.png", alt: "Fariya Maryam" },
     { src: "/media/home/work2.png", alt: "Fariya Maryam" },
@@ -69,10 +76,6 @@ const Home = () => {
     const onImageContainerClick = (e) => {
         setActiveImage(parseInt(e.target.getAttribute("data-id")));
     };
-
-    useEffect(() => {
-        console.log(activeImage);
-    }, [activeImage]);
 
     return (
         <>

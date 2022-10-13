@@ -5,7 +5,7 @@ const CustomFooter = () => {
     return (
         <Container
             fluid
-            className="bg-black section content-pad text-decoration-none justify-self-end"
+            className="bg-black section content-pad text-decoration-none"
             style={{ color: "rgba(255,255,255,0.7)" }}
         >
             <Row className="gap-5 flex-column flex-md-row justify-content-start">
@@ -62,6 +62,9 @@ const CustomFooter = () => {
                     </Link>
                     <Link href="/blogs" style={{ color: "inherit" }}>
                         Blogs
+                    </Link>
+                    <Link href="/donate" style={{ color: "inherit" }}>
+                        Donate
                     </Link>
                     <Link href="/contact" style={{ color: "inherit" }}>
                         Contact
