@@ -23,12 +23,13 @@ const Donate = () => {
                                 holistically!
                                 <br />
                                 The donors are the heart of every non-profit organisation, who enrich it and provide
-                                support with the most important resources.
+                                support with the most important resources. Please feel free to contribute any amount you're comfortable with
+through any of the methods listed below.
                             </p>
                             <h2 className="mt-5 gentium">Bank Information</h2>
                             <div className="align-self-center">
                                 <p className="mb-1 mt-2">fariya.maryam@okhdfcbank</p>
-                                <p>8968960055@paytm</p>
+                                <p>Paytm - 8968960055</p>
                             </div>
                         </div>
                     </Col>
