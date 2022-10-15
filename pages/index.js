@@ -219,14 +219,16 @@ const Home = () => {
                             }}
                         >
                             {workshopData.map((img, idx) => (
-                                <SwiperSlide key={idx}>
-                                    <img
-                                        src={img.src}
-                                        alt={img.alt}
-                                        className="d-block w-100 workshop-swiper-home"
-                                        style={{ objectFit: "cover" }}
-                                    />
-                                </SwiperSlide>
+                                // <div key={idx}>
+                                    <SwiperSlide key={idx}>
+                                        <img
+                                            src={img.src}
+                                            alt={img.alt}
+                                            className="d-block w-100 workshop-swiper-home"
+                                            style={{ objectFit: "cover" }}
+                                        />
+                                    </SwiperSlide>
+                                // </div>   
                             ))}
                         </Swiper>
                     </Row>
@@ -290,7 +292,7 @@ const Home = () => {
                         <Col
                             key={idx}
                             className="d-flex flex-column align-items-center bg-white p-0"
-                            style={{ minWidth: "300px", maxWidth: "300px", height: "380px" }}
+                            style={{ minWidth: "300px", maxWidth: "300px", height: "360px" }}
                         >
                             <img
                                 src={`/sdgs/E-WEB-Goal-${sdg.id.toString().padStart(2, "0")}.png`}

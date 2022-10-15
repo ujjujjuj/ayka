@@ -10,6 +10,9 @@
     min-height: 100vh;
     overflow-x: hidden;
 }
+:root {
+    // --bs-navbar-active-color: $primary;
+}
 .gentium {
     font-family: "Gentium Basic", serif;
 }
@@ -95,6 +98,7 @@ i {
         align-items: center;
         justify-content: flex-end;
         padding-bottom: 32px;
+        padding-inline: 12px;
         content: "";
         position: absolute;
         inset: 0;
@@ -278,9 +282,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     padding-inline: 15%;
-    & > * {
-        // max-width: 75%;
-    }
+
     &::before {
         position: absolute;
         top: 0;
@@ -350,4 +352,10 @@ a:hover {
 
 .manage-table input {
     background-color: transparent;
+}
+a.nav-link {
+    color: rgba(0, 0, 0, 0.7);
+    &.active {
+        color: $primary !important;
+    }
 }

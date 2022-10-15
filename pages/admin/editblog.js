@@ -3,14 +3,19 @@ import AdminNav from "../../components/AdminNav";
 import Router, { useRouter } from "next/router";
 import getClient from "../../lib/db";
 import { ObjectId } from "mongodb";
-import ReactMarkdown from "react-markdown";
-import { useEffect, useState } from "react";
-import { toast, ToastContainer } from "react-toastify";
+import { EditorState } from "draft-js";
+import { toast } from "react-toastify";
 import Blog from "../../components/Blog";
+import dynamic from "next/dynamic";
+import { useState, useRef } from "react";
+// install @types/draft-js @types/react-draft-wysiwyg and @types/draft-js @types/react-draft-wysiwyg for types
+
+const Editor = dynamic(() => import("react-draft-wysiwyg").then((mod) => mod.Editor), { ssr: false });
 
 const EditBlog = ({ blog }) => {
     const [blogTitle, setBlogTitle] = useState(blog.title);
     const [blogContent, setBlogContent] = useState(blog.content);
+    const [editorState, setEditorState] = useState(EditorState.createEmpty());
     const router = useRouter();
 
     const formSubmit = (e) => {
@@ -57,7 +62,15 @@ const EditBlog = ({ blog }) => {
                         />
                     </FloatingLabel>
                     <Form.Label>Content</Form.Label>
-                    <Form.Control
+                    <Editor
+                        editorState={editorState}
+                        toolbarClassName="toolbarClassName"
+                        wrapperClassName="wrapperClassName"
+                        editorClassName="editorClassName"
+                        onEditorStateChange={(editorState) => setEditorState(editorState)}
+                    />
+
+                    {/* <Form.Control
                         className="mb-4"
                         as="textarea"
                         rows={16}
@@ -65,7 +78,7 @@ const EditBlog = ({ blog }) => {
                         required
                         value={blogContent}
                         onChange={(e) => setBlogContent(e.target.value)}
-                    />
+                    /> */}
                     <Form.Check type="switch" label="Publish" name="publish" defaultChecked={blog.published} />
                     <Col>
                         <Button variant="primary" type="submit" className="mt-3 d-inline rounded-0 me-3">
@@ -73,13 +86,7 @@ const EditBlog = ({ blog }) => {
                         </Button>
                     </Col>
                 </Form>
-                <h2 className="mt-5">Preview</h2>
-                <hr />
-                <Row>
-                    <Blog blog={{...blog,title:blogTitle,content:blogContent,}}/>
-                </Row>
             </Container>
-            <ToastContainer />
         </>
     );
 };

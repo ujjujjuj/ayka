@@ -7,6 +7,7 @@ import "react-image-lightbox/style.css";
 import "../styles/index.scss";
 import "aos/dist/aos.css";
 import "react-toastify/dist/ReactToastify.css";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { ToastContainer } from "react-toastify";
 
 function MyApp({ Component, pageProps }) {
