@@ -38,7 +38,7 @@ const CustomNavbar = (props) => {
                             <Nav.Link>Donate</Nav.Link>
                         </Link>
                         <Link href="/contact" passHref>
-                            <Nav.Link>Volnteer</Nav.Link>
+                            <Nav.Link>Volunteer</Nav.Link>
                         </Link>
                     </Nav>
                 </Navbar.Collapse>
