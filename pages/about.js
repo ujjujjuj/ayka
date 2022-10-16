@@ -5,10 +5,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
 import volunteerData from "../data/volunteers.json";
 import testimonials from "../data/testimonials.json";
+import Head from "next/head";
 
 const About = () => {
     return (
         <>
+            <Head>
+                <title>Ayka | About</title>
+            </Head>
             <CustomNavbar />
             <Container fluid className="flex-grow-1">
                 <Row className="d-flex flex-column-reverse flex-xl-row align-items-center">

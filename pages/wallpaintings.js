@@ -1,10 +1,14 @@
 import CustomNavbar from "../components/CustomNavbar";
 import CustomFooter from "../components/CustomFooter";
 import { Container, Button, Row, Col } from "react-bootstrap";
+import Head from "next/head";
 
 const WallPaintings = () => {
     return (
         <>
+            <Head>
+                <title>Ayka | Wall Paintings</title>
+            </Head>
             <CustomNavbar />
             <Container fluid>
                 <Row className="section-top pt-xl-6 paint-bg text-center text-xl-start">

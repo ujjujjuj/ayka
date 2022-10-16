@@ -2,6 +2,7 @@ import CustomNavbar from "../components/CustomNavbar";
 import CustomFooter from "../components/CustomFooter";
 import { Container, Button, Row, Col } from "react-bootstrap";
 import Router from "next/router";
+import Head from "next/head";
 
 const featuresData = [
     {
@@ -24,6 +25,9 @@ const featuresData = [
 const Workshops = () => {
     return (
         <>
+            <Head>
+                <title>Ayka | Workshops</title>
+            </Head>
             <CustomNavbar />
             <Container fluid>
                 <Row className="">

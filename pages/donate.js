@@ -2,10 +2,14 @@ import CustomNavbar from "../components/CustomNavbar";
 import CustomFooter from "../components/CustomFooter";
 import { Container, Button, Row, Col } from "react-bootstrap";
 import Router from "next/router";
+import Head from "next/head";
 
 const Donate = () => {
     return (
         <>
+            <Head>
+                <title>Ayka | Donate</title>
+            </Head>
             <CustomNavbar />
             <Container fluid className="flex-grow-1 d-flex flex-column">
                 <Row className="flex-grow-1">
@@ -23,8 +27,8 @@ const Donate = () => {
                                 holistically!
                                 <br />
                                 The donors are the heart of every non-profit organisation, who enrich it and provide
-                                support with the most important resources. Please feel free to contribute any amount you are comfortabl with
-                                through any of the methods listed below.
+                                support with the most important resources. Please feel free to contribute any amount you
+                                are comfortabl with through any of the methods listed below.
                             </p>
                             <h2 className="mt-5 gentium">Bank Information</h2>
                             <div className="align-self-center">

@@ -3,6 +3,7 @@ import { Container, Row, Col, Dropdown } from "react-bootstrap";
 import { toast } from "react-toastify";
 import CustomFooter from "../components/CustomFooter";
 import CustomNavbar from "../components/CustomNavbar";
+import Head from "next/head";
 
 const Contact = () => {
     const [currentForm, setCurrentForm] = useState("normal"); // normal, city
@@ -45,6 +46,9 @@ const Contact = () => {
 
     return (
         <>
+            <Head>
+                <title>Ayka | Volunteer</title>
+            </Head>
             <CustomNavbar />
             <Container
                 fluid
