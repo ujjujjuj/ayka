@@ -50,10 +50,7 @@ const Contact = () => {
                 <title>Ayka | Volunteer</title>
             </Head>
             <CustomNavbar />
-            <Container
-                fluid
-                className="d-flex flex-grow-1 align-items-center text-white py-8 flex-column flex-xl-row px-xl-6 px-3 contact-container"
-            >
+            <Container fluid className="d-flex flex-grow-1 align-items-center text-white py-8 flex-column flex-xl-row px-xl-6 px-3 contact-container">
                 <Col
                     data-aos="fade-up"
                     xs={12}
@@ -63,24 +60,18 @@ const Contact = () => {
                 >
                     <h2 className="gentium display-6">Contact Us</h2>
                     <p>
-                        Ayka is a volunteer-driven organisation, and we are always on the lookout for talent, commitment
-                        and passionate individuals. To join us or to work with us, get in touch with this form now!
+                        Ayka is a volunteer-driven organisation, and we are always on the lookout for talent, commitment and passionate individuals. To join us
+                        or to work with us, get in touch with this form now!
                     </p>
-                    <p>
+                    <a href="mailto:aykaforthepeople@gmail.com" role="button">
                         <i className="fa-regular fa-envelope"></i>
                         &nbsp;&nbsp;aykaforthepeople@gmail.com
-                    </p>
+                    </a>
                 </Col>
                 <Col data-aos="fade-up" xs={12} xl={6} className="bg-white text-black p-4 p-sm-5">
                     <h2 className="gentium display-6 mb-5">Write To Us</h2>
                     <form className="custom-form d-flex flex-column gap-4" onSubmit={formSubmit}>
-                        <input
-                            type="text"
-                            placeholder="Name / Organization Name"
-                            required
-                            className="w-100"
-                            name="name"
-                        />
+                        <input type="text" placeholder="Name / Organization Name" required className="w-100" name="name" />
                         <div className="d-flex gap-4 flex-column flex-sm-row">
                             <input type="text" placeholder="Email" required className="w-100" name="email" />
                             <input type="text" placeholder="Phone" className="w-100" name="phone" />

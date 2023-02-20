@@ -10,19 +10,19 @@ import Head from "next/head";
 import sdgList from "../data/sdg.json";
 
 const topCarouselData = [
-    { src: "/media/home/fryer.png", alt: "Fariya Maryam" },
     { src: "/media/home/landing1.jpg", home: "Landing image" },
     { src: "/media/home/landing2.jpg", home: "Landing image" },
     { src: "/media/home/landing3.jpg", home: "Landing image" },
     { src: "/media/home/landing4.jpg", home: "Landing image" },
-    { src: "/media/home/landing5.jpg", home: "Landing image" },
 ];
 const workshopData = [
-    { src: "/media/home/work1.png", alt: "Fariya Maryam" },
-    { src: "/media/home/work2.png", alt: "Fariya Maryam" },
-    { src: "/media/home/work3.png", alt: "Fariya Maryam" },
-    { src: "/media/home/work4.png", alt: "Fariya Maryam" },
-    { src: "/media/home/work5.png", alt: "Fariya Maryam" },
+    // { src: "/media/home/work1.png", alt: "Workshop" },
+    { src: "/media/home/work2.png", alt: "Workshop" },
+    { src: "/media/home/work3.png", alt: "Workshop" },
+    { src: "/media/home/work4.png", alt: "Workshop" },
+    { src: "/media/home/work5.png", alt: "Workshop" },
+    { src: "/media/home/work6.png", alt: "Workshop" },
+    { src: "/media/home/work7.png", alt: "Workshop" },
 ];
 const featuresData = [
     {
@@ -55,10 +55,10 @@ const imageData = [
     { size: 6, src: "/media/home/gal6.png", alt: "Diwali donation drive and workshop" },
 ];
 const statsData = [
-    { name: "Workshops", amt: 22 },
-    { name: "Wall Paintings", amt: 10 },
-    { name: "Cities", amt: 4 },
-    { name: "Members", amt: 30 },
+    { name: "Workshops", amt: 50 },
+    { name: "Wall Paintings", amt: 60 },
+    { name: "Cities", amt: 8 },
+    { name: "Members", amt: 500 },
 ];
 
 const sponsorsData = ["aaghaz-e-taleem.jpg", "nanhe-khwab.jpg", "anadi.png"];
@@ -85,11 +85,7 @@ const Home = () => {
             <CustomNavbar />
             <Container fluid>
                 <Row className="">
-                    <Col
-                        xs={12}
-                        xl={6}
-                        className="flex-center align-items-xl-start section gap-2 content-pad paint-bg section text-center text-xl-start"
-                    >
+                    <Col xs={12} xl={6} className="flex-center align-items-xl-start section gap-2 content-pad paint-bg section text-center text-xl-start">
                         <div data-aos="fade-up">
                             <h1 className="gentium display-5">
                                 <i>Art</i> for the people, of the people, by the people
@@ -97,27 +93,16 @@ const Home = () => {
                             <p className="">
                                 We are a youth-led nonprofit organisation committed towards the betterment of society.
                                 <br />
-                                With a strong belief in empowerment through skill-building, we strive for holistic
-                                quality education and train young students in honing their creative talents and
-                                developing important life skills through workshops and classes. We also paint murals in
-                                rural areas in the form of interactive workshops with underprivileged children.
+                                With a strong belief in empowerment through skill-building, we strive for holistic quality education and train young students in
+                                honing their creative talents and developing important life skills through workshops and classes. We also paint murals in rural
+                                areas in the form of interactive workshops with underprivileged children.
                             </p>
                         </div>
                         <div className="d-flex gap-4" data-aos="fade-up">
-                            <Button
-                                variant="primary"
-                                size="lg"
-                                className="rounded-0"
-                                onClick={() => Router.push("/about")}
-                            >
+                            <Button variant="primary" size="lg" className="rounded-0" onClick={() => Router.push("/about")}>
                                 Explore
                             </Button>
-                            <Button
-                                variant="outline-primary"
-                                size="lg"
-                                className="rounded-0"
-                                onClick={() => Router.push("/contact")}
-                            >
+                            <Button variant="outline-primary" size="lg" className="rounded-0" onClick={() => Router.push("/contact")}>
                                 Volunteer
                             </Button>
                         </div>
@@ -137,12 +122,7 @@ const Home = () => {
                         >
                             {topCarouselData.map((img, idx) => (
                                 <SwiperSlide key={idx}>
-                                    <img
-                                        src={img.src}
-                                        alt={img.alt}
-                                        className="d-block w-100 homeTopSwiperImage"
-                                        style={{ objectFit: "cover" }}
-                                    />
+                                    <img src={img.src} alt={img.alt} className="d-block w-100 homeTopSwiperImage" style={{ objectFit: "cover" }} />
                                 </SwiperSlide>
                             ))}
                         </Swiper>
@@ -154,21 +134,10 @@ const Home = () => {
                             Ayka works towards holistic education of underprivileged children by&nbsp;
                             <i>skill-building</i> and <i>creative training</i>.
                         </h2>
-                        <Row
-                            xs={1}
-                            sm={2}
-                            xl={4}
-                            className="d-flex w-100 gy-5 content-pad text-center text-sm-start justify-content-around align-items-center"
-                        >
+                        <Row xs={1} sm={2} xl={4} className="d-flex w-100 gy-5 content-pad text-center text-sm-start justify-content-around align-items-center">
                             {featuresData.map((dat, idx) => (
-                                <Col
-                                    key={idx}
-                                    className="d-flex flex-column align-items-center align-items-sm-start features-data-home"
-                                >
-                                    <i
-                                        className={`fa-solid ${dat.iconName} green mb-2`}
-                                        style={{ fontSize: "1.8rem" }}
-                                    ></i>
+                                <Col key={idx} className="d-flex flex-column align-items-center align-items-sm-start features-data-home">
+                                    <i className={`fa-solid ${dat.iconName} green mb-2`} style={{ fontSize: "1.8rem" }}></i>
                                     <h5 className="green">{dat.title}</h5>
                                     <p>{dat.text} </p>
                                 </Col>
@@ -176,26 +145,17 @@ const Home = () => {
                         </Row>
                     </Col>
                 </Row>
-                <Row
-                    className="bg-secondary flex-center section"
-                    style={{ paddingLeft: "0 !important", paddingRight: "0 !important" }}
-                >
+                <Row className="bg-secondary flex-center section" style={{ paddingLeft: "0 !important", paddingRight: "0 !important" }}>
                     <Row className="d-flex justify-content-center mb-5" data-aos="fade-up">
                         <Col className="col-xl-6 text-center px-4">
                             <h2 className="gentium text-center display-6">
                                 Skill-building <i>workshops</i> for students
                             </h2>
                             <p className="">
-                                We conduct skill-building workshops with students to aid in creativity and training in
-                                addition to education across many art mediums such as cartooning, Lantern-Making, Wall
-                                Hangings, Warli Art.
+                                We conduct skill-building workshops with students to aid in creativity and training in addition to education across many art
+                                mediums such as cartooning, Lantern-Making, Wall Hangings, Warli Art.
                             </p>
-                            <Button
-                                variant="primary"
-                                size="lg"
-                                className="rounded-0"
-                                onClick={() => Router.push("/workshops")}
-                            >
+                            <Button variant="primary" size="lg" className="rounded-0" onClick={() => Router.push("/workshops")}>
                                 Learn More
                             </Button>
                         </Col>
@@ -220,15 +180,10 @@ const Home = () => {
                         >
                             {workshopData.map((img, idx) => (
                                 // <div key={idx}>
-                                    <SwiperSlide key={idx}>
-                                        <img
-                                            src={img.src}
-                                            alt={img.alt}
-                                            className="d-block w-100 workshop-swiper-home"
-                                            style={{ objectFit: "cover" }}
-                                        />
-                                    </SwiperSlide>
-                                // </div>   
+                                <SwiperSlide key={idx}>
+                                    <img src={img.src} alt={img.alt} className="d-block w-100 workshop-swiper-home" style={{ objectFit: "cover" }} />
+                                </SwiperSlide>
+                                // </div>
                             ))}
                         </Swiper>
                     </Row>
@@ -238,27 +193,14 @@ const Home = () => {
                         <h2 className="section-heading text-centerdiv">
                             We <i>paint walls</i> around rural areas for beautification, awareness and on requests.
                         </h2>
-                        <Button
-                            variant="primary"
-                            size="lg"
-                            className="rounded-0"
-                            onClick={() => Router.push("/wallpaintings")}
-                        >
+                        <Button variant="primary" size="lg" className="rounded-0" onClick={() => Router.push("/wallpaintings")}>
                             Learn More
                         </Button>
                     </Col>
                 </Row>
                 <Row className="p-0 paintingGallery" onClick={onImageContainerClick} data-aos="fade-up">
                     {imageData.map((img, idx) => (
-                        <Col
-                            key={idx}
-                            xs={2 * img.size}
-                            xl={img.size}
-                            className="p-0"
-                            style={{ height: "400px" }}
-                            data-title={img.alt}
-                            data-id={idx}
-                        >
+                        <Col key={idx} xs={2 * img.size} xl={img.size} className="p-0" style={{ height: "400px" }} data-title={img.alt} data-id={idx}>
                             <img src={img.src} alt={img.alt} className="w-100 h-100 fit-cover" />
                         </Col>
                     ))}
@@ -302,10 +244,7 @@ const Home = () => {
                             />
                             <div className="m-5 my-4">
                                 <h5>{sdg.title}</h5>
-                                <div
-                                    className="bg-black my-3"
-                                    style={{ height: "2px", width: "33%", borderRadius: "999px", opacity: 0.4 }}
-                                ></div>
+                                <div className="bg-black my-3" style={{ height: "2px", width: "33%", borderRadius: "999px", opacity: 0.4 }}></div>
                                 <p>{sdg.content}</p>
                             </div>
                         </Col>
@@ -328,7 +267,7 @@ const Home = () => {
 };
 
 const AnimatingStat = ({ stat }) => {
-    const STEPS = 100;
+    const STEPS = 42;
     const TIMEMS = 1500 + Math.random() * 1000 - 500;
     const [amount, setAmount] = useState(0);
 
@@ -339,9 +278,17 @@ const AnimatingStat = ({ stat }) => {
 
     useEffect(() => {
         if (!isVisible) {
-            // setAmount(0);
+            setAmount(0);
         } else {
-            intervalRef.current = setInterval(() => setAmount((_amount) => _amount + stat.amt / STEPS), TIMEMS / STEPS);
+            intervalRef.current = setInterval(() => {
+                setAmount((_amount) => {
+                    if (_amount > stat.amt) {
+                        clearInterval(intervalRef.current);
+                        return stat.amt;
+                    }
+                    return _amount + stat.amt / STEPS;
+                });
+            }, TIMEMS / STEPS);
         }
         return () => clearInterval(intervalRef.current);
     }, [isVisible, stat]);

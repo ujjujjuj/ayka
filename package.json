@@ -4,6 +4,7 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
+        "export": "next build && next export",
         "start": "next start",
         "lint": "next lint",
         "seed-db": "node -r dotenv/config -r esm scripts/seed-db.js dotenv_config_path=.env.local"
